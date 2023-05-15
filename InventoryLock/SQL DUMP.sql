@@ -1,3 +1,4 @@
+DROP DATABASE inventory_lock;
 CREATE DATABASE inventory_lock; --Создание базы данных
 USE inventory_lock;
 

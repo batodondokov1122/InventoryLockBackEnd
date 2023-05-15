@@ -47,14 +47,13 @@ class Auth{
     public function save(): string{
         $this->user_token = uniqid();
 
-        $sql = Database::prepare('INSERT INTO `authentications` (`user_name`, `user_email`, `user_token`, `authentificated_at`) 
-        VALUES (:user_name, :user_email, :user_token, NOW());');
+        $sql = Database::prepare('INSERT INTO `authentications` (`user_name`, `user_email`, `user_token`, `confirmation_code`, `authentificated_at`) 
+        VALUES (:user_name, :user_email, :user_token, 0, NOW());');
         $sql->execute([
             'user_name' => $this->user_name,
             'user_email' => $this->user_email,
             'user_token' => $this->user_token,
         ]);
-
         return $this->user_token;
     }
 

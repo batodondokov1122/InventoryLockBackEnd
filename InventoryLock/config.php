@@ -1,8 +1,8 @@
 <?php
 
 return[
-    'db_host' => 'YOUR_HOST',
-    'db_name' => 'YOUR_DB_NAME',
-    'db_user'=> 'YOUR_USER',
-    'db_password' => 'YOUR_PASSWORD',
+    'db_host' => '127.0.0.1',
+    'db_name' => 'inventory_lock',
+    'db_user'=> 'root',
+    'db_password' => 'asdasd123',
 ];
